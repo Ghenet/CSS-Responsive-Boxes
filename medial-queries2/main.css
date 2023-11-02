@@ -1,3 +1,77 @@
 body {
   background: papayawhip;
 }
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.a{
+  background-color:red;
+}
+.b{
+  background-color:green;
+}
+.c{
+  background-color:blue;
+}
+.d{
+  background-color:yellow;
+}
+.e{
+  background-color:purple;
+}
+.f{
+  background-color: orange;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 3;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50vh;
+  margin: 0.2em;
+}
+.a, .f {
+  flex-grow: 1;
+  margin: 0.4em;
+  max-height: 25vh;
+}
+
+.b {
+  width: 100%;
+  flex-grow: 2;
+  min-height: 50vh;
+}
+.c, .d, .e {
+  flex-grow: 1;
+  margin: 0.2em;
+  min-height: 20vh;
+}
+
+@media (min-width: 600px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+  }
+  .a {
+    width: 100%; 
+    max-height: 10vh;
+  }
+  .main {
+    justify-content: stretch;
+    flex-basis: 70%;
+    min-height: 80vh;
+    margin: 0.2em;
+  }
+  .f {
+    margin-top: 3.1em;
+    flex-grow: 5;
+    min-height: 80vh;
+  }
+}
